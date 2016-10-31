@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SharedService } from './shared.service';
 
 import { routing } from './app.routing';
 
@@ -21,7 +22,7 @@ import { routing } from './app.routing';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

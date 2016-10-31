@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: SharedService) { }
 
   ngOnInit() {
+    this.service.updateData('You are at Settings');
   }
 
 }
